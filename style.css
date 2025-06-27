@@ -1,0 +1,668 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #080808;
+      --second-bg-color: #131313;
+      --text-color: white;
+      --main-color: #00ffee;
+ 
+ }
+/* Body Styling */
+body {
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    overflow-x: hidden;
+    
+}
+
+.navbar-toggler{
+    background-color: aquamarine;
+    border: 3px solid #b32121;
+}
+
+.navbar-toggler-icon{
+    box-shadow: 
+        0px 4px 8px rgba(0, 0, 0, 0.2), /* প্রথম স্তরের shadow */
+        0px 8px 25px rgba(0, 0, 0, 1.5), /* দ্বিতীয় স্তরের shadow */
+        0px 12px 55px rgba(0, 0, 0, 1);
+    
+}
+
+
+
+ .nav-item a{
+    color: rgb(58, 52, 52) !important;
+    background: #d6d0d0;
+    margin: 5px;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+    
+    
+    
+} 
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: rgb(197, 48, 48); 
+    transition: width 0.4s ease; 
+}
+
+.nav-item a:hover::after {
+    width: 100%; 
+}
+
+.img{
+    height: 14vh;
+    border-radius: 50%;
+}
+.middle-section {
+    position: absolute;
+    top: 50%; /* Position it vertically centered */
+    left: 50%; /* Position it horizontally centered */
+    transform: translate(-50%, -50%); /* Center the element */
+    color: white; /* Text color */
+    z-index: 10; /* Ensure it appears above the images */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow for better visibility */
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* WhatsApp color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.8), 0 0 30px rgba(37, 211, 102, 0.6);
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+
+
+.navitem{
+    margin-left: 5px !important;
+}
+  
+
+.navbar-brand {
+    padding-left: 7%;
+    
+}
+
+
+.navbar-nav{
+    padding-right: 7%;
+}
+
+
+.btn-pink {
+    background: black;
+    margin-left: 50px;
+    border: 1px solid black; 
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(91, 44, 111, 0.7),
+    0 0 25px rgba(91, 44, 111, 1),
+    0 0 55px rgba(91, 44, 111, 0.7),
+    0 0 75px rgba(91, 44, 111, 0.7);
+}
+
+.btn-pink:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+    color: #fff; /* Keep text color white */
+    box-shadow: 0 0 20px rgba(91, 44, 111, 1), 0 0 30px rgba(91, 44, 111, 0.8)
+}
+
+
+/* Navbar Styling */
+.navbar {
+    background: transparent !important;
+}
+
+/* Image Carousel Styling */
+.carousel {
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+}
+
+.carousel-inner {
+    height: 100%; /* Ensure the inner carousel takes full height */
+}
+
+.carousel-item {
+    height: 100%; /* Ensure each item takes full height */
+}
+
+.carousel img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the area without stretching */
+}
+
+/* Contact Button Customization */
+.contact-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#contactUsButton {
+    padding: 10px 20px; /* Padding can be adjusted as needed */
+    font-weight: bold; /* You can keep or adjust this */
+    transition: background-color 0.3s; /* If needed */
+}
+
+/* Pop-up Panel Styling */
+.popup-panel {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    background-color: white; /* Ensure this matches your design */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px; /* Adjust width as needed */
+    z-index: 999; /* Keep it above other elements */
+}
+
+/* Close Icon Styling */
+.close-popup {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    height: 3vh;
+    border-radius: 50%;
+    background: #b32121;
+    
+
+}
+
+
+
+.booking-panel {
+    position: absolute; /* Position it relative to the button */
+    z-index: 1000; /* Ensure it appears above other elements */
+    background-color: white; /* Optional: Background color for the panel */
+    padding: 10px; /* Optional: Padding for the panel */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.booking-container {
+    display: inline-block; /* Ensure it's displayed inline with other nav items */
+    margin-left: 15px;
+}
+
+.booking-form {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px; /* Adjust width as needed */
+}
+
+
+
+/* Contact Options Styling */
+.contact-option {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    margin: 5px 0;
+    background-color: #f1f1f1; /* Adjust to fit your theme */
+    color: #333;
+    border: none;
+    border-radius: 3px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-option:hover {
+    background-color: #ddd; /* Change this to match your design */
+}
+
+
+/* service section */
+
+.services-section{
+    margin-top: 7%;
+}
+
+.services-section h2{
+     font-family:"Times New Roman", Times, serif; 
+     font-size: 10vh;
+}
+
+.services-section p{
+  display: inline-block;
+  font-family: "Arial";
+}
+
+/* Center text styling */
+.section-title {
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* Service box styling */
+.service-box {
+    background-color: #d7dde3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 0 10px 2px #5983ae,   /* First layer, close and intense */
+        0 0 20px 4px #537fab; /* Second layer, medium distance */
+        
+}
+
+/* Logo hover effect */
+.service-box .service-logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    transition: transform 0.3s;
+    box-shadow: 
+        0 0 10px 2px #5983ae,   /* First layer, close and intense */
+        0 0 20px 4px #537fab,   /* Second layer, medium distance */
+        0 0 30px 6px #234a70;  /* Third layer, further out */
+        
+
+}
+
+.service-box:hover .service-logo {
+    transform: translateY(-7px);
+}
+
+.service-box h5 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.service-box p{
+    font-family: 'Arial', cursive;
+}
+
+.service-box h5{
+    font-family: 'Georgia', serif;  /* Elegant serif font */
+    font-size: 1.5rem;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Box hover effect */
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* service section */
+
+
+/* about us */
+
+.about-section {
+    margin-top: 15vh;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f5f5; /* Light background for contrast */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px; /* Restrict image width */
+    border-radius: 8px;
+}
+
+.about-text {
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.package-pricing {
+    background-color: #f9f9f9;
+  }
+  
+  .package-pricing h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .package-pricing p {
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .package-pricing .card {
+  height: 300px;                 /* Adjust as needed */
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;         /* Align content to the bottom of the card */
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  
+  }
+  
+  .package-pricing .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .package-pricing .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally centers child elements */
+    justify-content: center; /* Vertically centers child elements (optional) */
+    text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  }
+
+  .card-body li{
+    color: rgb(33, 19, 221) !important;
+    
+  }
+
+  #picture1{
+    background-image: url('Oil\ message.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  #picture2{
+    background-image: url('Thai\ massage.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  #picture3{
+    background-image: url('Back\ &\ Shoulder\ Massage.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  #picture4{
+    background-image: url('Four\ Hand\ Massage.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  #picture5{
+    background-image: url('Full\ Body\ Massage.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  #picture6{
+    background-image: url('Special\ Massage.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  #picture7{
+    background-image: url('Foot\ Massage.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  #picture8{
+    background-image: url('Sensual\ Massage.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  #picture9{
+    background-image: url('Aroma\ Oil\ Massage.png');
+    background-size: cover;
+    background-position: center;
+    
+  }
+  
+  .package-pricing .card-title {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    text-align: center;
+    
+  }
+  
+  .package-pricing ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .package-pricing ul li {
+    font-size: 1rem;
+    color: #333;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .package-pricing ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .package-pricing ul li::before {
+    content: "🕒 ";
+    color: #007bff;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+  
+  
+
+/* Section for price */
+
+
+/* contact */
+
+/* Section Styling */
+.garden-thai-spa {
+    background-image: url('Spa\ center.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates the fixed background effect */
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+    color: #333;
+  }
+  
+  /* Icon Styling */
+  .spa-icon {
+    font-size: 3rem; /* Large icon size */
+    color: #e6eaee; /* Spa icon color */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Title Styling */
+  .spa-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e0e4ea; /* Title color matching icon */
+    margin: 0.5rem 0;
+  }
+  
+  /* Description Styling */
+  .spa-description {
+    font-size: 1rem;
+    color: #fff; /* White text for readability */
+    max-width: 1100px;
+    margin: 0 auto;
+    line-height: 1.6;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-family: 'Lora', serif;
+  }
+
+  /* contact */
+
+  /* Footer */
+
+  /* Footer Styling */
+.footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background with 80% opacity */
+    color: #f1f1f1;
+    padding: 3rem 0;
+    border-radius: 25vh;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-description {
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+  
+  .footer h5 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+  
+  /* Social Media Icons */
+  .social-links {
+    
+    gap: 1rem;
+  }
+
+  
+  
+  .social-icon {
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* Color change on hover */
+  }
+  
+  /* Footer Bottom Text */
+  .footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    color: #aaaaaa;
+  }
+
+  /* footer */
+
+  .social-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin-top: 10vh;
+    margin: 5px;
+  }
+  
+  
+  .social-icon a:hover{
+      color: var(--text-color);
+      transform: scale(1.3)translateY(-5px);
+      box-shadow: 0 0 25px var(--main-color);
+      background-color: var(--main-color);
+  }
+  
+
+  @media (max-width: 767px) {
+    #bookNowButton {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    /* Center the button and adjust spacing on small screens */
+    .booking-container {
+        text-align: center;
+        margin-left: -45px;
+    }
+}
+
+
+
